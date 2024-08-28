@@ -72,7 +72,7 @@
     var targetBox = document.getElementById("targetBox");
 
     var score = 0
-    var timer = 5 // Default == 30
+    var timer = 30 // Default == 30
     var tagretX = 0
     var targetY = 0
 
@@ -115,9 +115,9 @@
         },
         1000
     )
-
+    
     function restart() {
-        timer = 5 + 1
+        timer = 30 + 1
         score = 0
         placeTarget();
         targetBox.classList.remove("hidden")
@@ -126,6 +126,10 @@
         scoreBox.classList.add("hidden")
         scoreBox2.classList.remove("visible")
         scoreBox2.classList.add("hidden")
+        // targetBox.style.display = "hidden"
+        // targetBox.style.display = "block" 
+
+
         scoreBox.innerText = "Score: " + score;
 
     }
